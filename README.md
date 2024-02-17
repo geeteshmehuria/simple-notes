@@ -3,7 +3,7 @@
 **Welcome to Simple Notes!** Your go-to destination for effortless note-taking and organization. Our mission is to provide users with a seamless platform to store, edit, and manage their notes with ease.
 
 ## Live Link
-[Simple Notes Link](https://simple-notes-theta.vercel.app/){:target="_blank"}
+<a href="https://simple-notes-theta.vercel.app/" target="_blank">Simple Notes Link</a>
 
 ## Authors
 - Geetesh Mehuria 
@@ -12,8 +12,9 @@
 - [About Simple Notes](#about-simple-notes)
 - [Technology Stack](#technology-stack)
 - [Project Overview](#project-overview)
-- [Backend GitHub Repositories ](#backend-gitHub-repositories )
-- [Backend Live ](#backend-live)
+- [Project Screenshots](#project-screenshots)
+- [Backend GitHub Repositories](#backend-github-repositories)
+- [Backend Live](#backend-live)
 
 ## About Simple Notes
 
@@ -46,23 +47,26 @@ Our website is built using cutting-edge technologies to ensure a robust and user
 Simple Notes is a user-friendly platform designed to simplify the note-taking process. With intuitive features and a sleek interface, users can effortlessly store, edit, and manage their notes from anywhere, at any time. Whether you're jotting down ideas, keeping track of tasks, or organizing meeting notes, Simple Notes provides the tools you need to stay organized and productive.
 
 ## Project Screenshots 
-- Home
-![Home](https://github.com/geeteshmehuria/simple-notes-backend/assets/70647591/65997d45-a196-4a6d-ac19-d99df1f2d56b)
 
-- Sign Up
-![Sign Up](https://github.com/geeteshmehuria/simple-notes-backend/assets/70647591/ccb0a4f0-f4ef-4b1b-a603-84529f9c4307)
+Here are some screenshots from our Simple Notes application:
 
-- Log In
-![Log In](https://github.com/geeteshmehuria/simple-notes-backend/assets/70647591/ddde0218-467b-43a2-8bd5-05ddd2156e88)
+- **Home:**
+  ![Home](https://github.com/geeteshmehuria/simple-notes-backend/assets/70647591/65997d45-a196-4a6d-ac19-d99df1f2d56b)
 
-- Dashboard
-![Dashboard](https://github.com/geeteshmehuria/simple-notes-backend/assets/70647591/18c57fec-bffd-4474-96f3-b81c888a3952)
+- **Sign Up:**
+  ![Sign Up](https://github.com/geeteshmehuria/simple-notes-backend/assets/70647591/ccb0a4f0-f4ef-4b1b-a603-84529f9c4307)
 
-- Add Notes
-![Add Notes](https://github.com/geeteshmehuria/simple-notes-backend/assets/70647591/b16fae61-e95f-41e0-a44b-41ee15a744e8)
+- **Log In:**
+  ![Log In](https://github.com/geeteshmehuria/simple-notes-backend/assets/70647591/ddde0218-467b-43a2-8bd5-05ddd2156e88)
+
+- **Dashboard:**
+  ![Dashboard](https://github.com/geeteshmehuria/simple-notes-backend/assets/70647591/18c57fec-bffd-4474-96f3-b81c888a3952)
+
+- **Add Notes:**
+  ![Add Notes](https://github.com/geeteshmehuria/simple-notes-backend/assets/70647591/b16fae61-e95f-41e0-a44b-41ee15a744e8)
  
 ## Backend GitHub Repositories 
-[Simple-Notes-Backend Github link](https://github.com/geeteshmehuria/simple-notes-backend){:target="_blank"}
+<a href="https://github.com/geeteshmehuria/simple-notes-backend" target="_blank">Simple-Notes-Backend Github link</a>
 
 ## Backend Live 
-[Simple-Notes-Backend Live link](https://aquamarine-sturgeon-robe.cyclic.app/){:target="_blank"}
+<a href="https://aquamarine-sturgeon-robe.cyclic.app/" target="_blank">Simple-Notes-Backend Live link</a>
