@@ -10,18 +10,27 @@ const Home = () => {
 
   return (
     <>
-      <Box className="bg-[#7f7b7b] flex justify-center" mt={"4rem"}>
+      <Box
+        className="bg-[#7f7b7b] flex justify-center"
+        mt={{ base: "0", md: "4rem" }}
+      >
         <Box
-          className="flex items-center justify-center  w-[88%] gap-[3rem]"
+          className="flex items-center justify-center   gap-[3rem]"
           // border={"2px solid black"}
+          flexDirection={{ base: "column", md: "row" }}
+          w={{ base: "100%", md: "80%" }}
           p={"2rem"}
         >
           <Box>
             <Image src={Img} alt="Notes" />
           </Box>
-          <Box width={"40%"}>
+          <Box width={{ base: "100%", md: "40%" }}>
             {/*  color: "#90ee90"  */}
-            <Heading as={"h1"} fontSize={"3em"} color={"white"}>
+            <Heading
+              as={"h1"}
+              fontSize={{ base: "2rem", md: "3rem" }}
+              color={"white"}
+            >
               The simplest way to keep notes
             </Heading>
             {auth ? (

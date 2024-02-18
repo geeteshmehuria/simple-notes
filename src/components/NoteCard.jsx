@@ -73,6 +73,9 @@ const NoteCard = ({ noteID, title, body, getNotes }) => {
   return (
     <>
       <Box
+        display={"flex"}
+        flexDirection={"column"}
+        alignItems="center"
         p={"2rem 1.4rem"}
         boxShadow={
           "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px"
@@ -83,7 +86,14 @@ const NoteCard = ({ noteID, title, body, getNotes }) => {
         <Text fontWeight="bold" fontSize="lg">
           {title}
         </Text>
-        <Text>{body}</Text>
+        <Text
+          w={{ base: "80%", md: "100%" }}
+          m={{ base: "auto", md: "0" }}
+          textAlign={"center"}
+          border={"2px solid black"}
+        >
+          {body}
+        </Text>
         <Flex mt={4}>
           <Button colorScheme="blue" mr={2} onClick={handleEdit}>
             Edit

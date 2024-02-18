@@ -1,14 +1,31 @@
-import { Box, Button, Flex, Heading, Spacer, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerHeader,
+  DrawerOverlay,
+  Flex,
+  Heading,
+  IconButton,
+  Spacer,
+  Text,
+  useDisclosure,
+} from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { authLinLout } from "../redux/authSlice";
 import axios from "axios";
+import { HamburgerIcon } from "@chakra-ui/icons";
 // import React from "react";
 
 const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const auth = useSelector((state) => state.auth.auth);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const handleLogout = async () => {
     try {
@@ -31,15 +48,40 @@ const Navbar = () => {
   return (
     <>
       <Box>
-        <Flex p={"1.5rem"} alignItems="center" boxShadow="base" bg={"#091e17"}>
+        <Flex
+          p={"1.5rem"}
+          boxShadow="base"
+          bg={"#091e17"}
+          display={"flex"}
+          alignItems={"center"}
+          direction={{ base: "row", md: "row" }}
+        >
           <Box>
-            <Heading as="h2" fontSize={"2rem"} color={"white"}>
-              SimpleNotes
-            </Heading>
+            <Link to={"/"}>
+              <Heading
+                as="h2"
+                fontSize={{ base: "1.6rem", md: "2rem" }}
+                color={"white"}
+              >
+                SimpleNotes
+              </Heading>
+            </Link>
           </Box>
           <Spacer />
           <Box>
-            <Flex gap={4}>
+            <IconButton
+              icon={<HamburgerIcon color="white" fontSize={"1.6rem"} />}
+              aria-label="Open navigation"
+              onClick={onOpen}
+              display={{ base: "flex", md: "none" }}
+              bgColor="green"
+            />
+
+            <Flex
+              gap={4}
+              display={{ base: "none", md: "flex" }}
+              justifyContent="space-around"
+            >
               <Link to="/">
                 <Button
                   fontSize={"1.3rem"}
@@ -101,6 +143,65 @@ const Navbar = () => {
             </Flex>
           </Box>
         </Flex>
+
+        <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
+          <DrawerOverlay />
+          <DrawerContent>
+            <DrawerCloseButton />
+            <DrawerHeader>Menu</DrawerHeader>
+            <DrawerBody>
+              <Box>
+                <Link
+                  className="hover:bg-primeGreen-600 block py-2"
+                  color="#2f4e44"
+                  to="/"
+                  onClick={onClose}
+                >
+                  Home
+                </Link>
+              </Box>
+              {auth ? (
+                <>
+                  <Link
+                    to="/dashboard"
+                    className="hover:bg-primeGreen-600 block py-2"
+                    color="#2f4e44"
+                    onClick={onClose}
+                  >
+                    Dashboard
+                  </Link>
+
+                  <Text
+                    className="hover:bg-primeGreen-600 block py-2"
+                    color="#2f4e44"
+                    onClick={onClose}
+                  >
+                    Logout
+                  </Text>
+                </>
+              ) : (
+                <>
+                  <Link
+                    to="/login"
+                    className="hover:bg-primeGreen-600 block py-2"
+                    color="#2f4e44"
+                    onClick={onClose}
+                  >
+                    Login
+                  </Link>
+                  <Link
+                    to="/signup"
+                    className="hover:bg-primeGreen-600 block py-2"
+                    color="#2f4e44"
+                    onClick={onClose}
+                  >
+                    SingUp
+                  </Link>
+                </>
+              )}
+            </DrawerBody>
+          </DrawerContent>
+        </Drawer>
       </Box>
     </>
   );
