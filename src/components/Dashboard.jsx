@@ -42,7 +42,7 @@ const Dashboard = () => {
       }
       try {
         const res = await axios.get(
-          "https://aquamarine-sturgeon-robe.cyclic.app/notes",
+          "https://simple-notes-backend.onrender.com/notes",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -66,7 +66,7 @@ const Dashboard = () => {
     }
     try {
       const res = await axios.get(
-        "https://aquamarine-sturgeon-robe.cyclic.app/notes",
+        "https://simple-notes-backend.onrender.com/notes",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -80,7 +80,7 @@ const Dashboard = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "https://aquamarine-sturgeon-robe.cyclic.app/notes",
+        "https://simple-notes-backend.onrender.com/notes",
         {
           title,
           body,

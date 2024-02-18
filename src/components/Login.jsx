@@ -37,7 +37,7 @@ const Login = () => {
     console.log(` ${password}  , ${email}`);
     try {
       const response = await axios.post(
-        "https://aquamarine-sturgeon-robe.cyclic.app/users/login",
+        "https://simple-notes-backend.onrender.com/users/login",
         {
           email,
           password,

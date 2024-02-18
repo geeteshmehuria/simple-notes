@@ -28,7 +28,7 @@ const NoteCard = ({ noteID, title, body, getNotes }) => {
   const handleDelete = async () => {
     try {
       await axios.delete(
-        `https://aquamarine-sturgeon-robe.cyclic.app/notes/${noteID}`,
+        `https://simple-notes-backend.onrender.com/notes/${noteID}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -49,7 +49,7 @@ const NoteCard = ({ noteID, title, body, getNotes }) => {
   const handleUpdate = async () => {
     try {
       await axios.patch(
-        `https://aquamarine-sturgeon-robe.cyclic.app/notes/${noteID}`,
+        `https://simple-notes-backend.onrender.com/notes/${noteID}`,
         {
           title: updatedTitle,
           body: updatedBody,
@@ -90,7 +90,7 @@ const NoteCard = ({ noteID, title, body, getNotes }) => {
           w={{ base: "80%", md: "100%" }}
           m={{ base: "auto", md: "0" }}
           textAlign={"center"}
-          border={"2px solid black"}
+          // border={"2px solid black"}
         >
           {body}
         </Text>

@@ -30,7 +30,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       const response = await axios.post(
-        "https://aquamarine-sturgeon-robe.cyclic.app/users/logout",
+        "https://simple-notes-backend.onrender.com/users/logout",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

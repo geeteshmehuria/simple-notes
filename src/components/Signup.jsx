@@ -50,7 +50,7 @@ const Signup = () => {
     console.log(`${username}, ${password}  , ${email}`);
     try {
       const response = await axios.post(
-        "https://aquamarine-sturgeon-robe.cyclic.app/users/register",
+        "https://simple-notes-backend.onrender.com/users/register",
         {
           username,
           email,
