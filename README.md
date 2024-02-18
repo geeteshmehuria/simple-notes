@@ -3,7 +3,7 @@
 **Welcome to Simple Notes!** Your go-to destination for effortless note-taking and organization. Our mission is to provide users with a seamless platform to store, edit, and manage their notes with ease.
 
 ## Live Link
-<a href="https://simple-notes-theta.vercel.app/" target="_blank">Simple Notes Link</a>
+<a href="https://simple-notes-green.vercel.app/" target="_blank">Simple Notes Link</a>
 
 ## Authors
 - Geetesh Mehuria 
