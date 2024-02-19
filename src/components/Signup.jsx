@@ -1,14 +1,3 @@
-// import React from 'react'
-
-// const Signup = () => {
-//   return (
-//     <>
-//       <h1>Sign Up</h1>
-//     </>
-//   )
-// }
-
-// export default Signup
 
 import {
   Box,
@@ -32,25 +21,23 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 
-// box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-// box-shadow: 0px 9px 40px 11px rgba(255,127,5,0.44);
-// 0px 9px 40px 11px rgba(255,127,5,0.44);
-// box-shadow: 0px 9px 40px 11px rgba(255,5,206,0.3);
-// box-shadow: 0px 9px 88px -1px rgba(157,159,119,0.89);
 const Signup = () => {
   const [username, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [city, setCity] = useState("");
+  const [gender, setGender] = useState("");
+  const [age, setAge] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(`${username}, ${password}  , ${email}`);
+    
     try {
       const response = await axios.post(
-        "https://simple-notes-backend.onrender.com/users/register",
+        "https://insta-backend-dece.onrender.com/users/register",
         {
           username,
           email,
@@ -110,6 +97,27 @@ const Signup = () => {
                   border={"1px solid gray"}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
+                />
+                <Input
+                  type="password"
+                  placeholder="Password"
+                  border={"1px solid gray"}
+                  value={city}
+                  onChange={(e) => setCity(e.target.value)}
+                />
+                <Input
+                  type="password"
+                  placeholder="Password"
+                  border={"1px solid gray"}
+                  value={age}
+                  onChange={(e) => setAge(e.target.value)}
+                />
+                <Input
+                  type="password"
+                  placeholder="Password"
+                  border={"1px solid gray"}
+                  value={gender}
+                  onChange={(e) => setGender(e.target.value)}
                 />
                 <Button type="submit" colorScheme="green" width="full">
                   Sign Up

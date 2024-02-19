@@ -18,7 +18,7 @@ import axios from "axios";
 
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router";
+
 import { authLinLout } from "../redux/authSlice";
 import { Link } from "react-router-dom";
 
@@ -30,14 +30,13 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
-  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(` ${password}  , ${email}`);
     try {
       const response = await axios.post(
-        "https://simple-notes-backend.onrender.com/users/login",
+        "https://insta-backend-dece.onrender.com/users/login",
         {
           email,
           password,
@@ -53,9 +52,7 @@ const Login = () => {
         setShowModal(true);
         setModalMessage("Login successful");
         dispatch(authLinLout(true));
-        setTimeout(() => {
-          navigate("/dashboard");
-        }, 1000);
+        setTimeout(() => {}, 1000);
       } else {
         console.error("Login failed");
       }
@@ -67,9 +64,6 @@ const Login = () => {
   };
   const closeModal = () => {
     setShowModal(false);
-    if (modalMessage === "Login successful") {
-      navigate("/notes");
-    }
   };
   return (
     <div className="bg-[#7f7b7b] flex h-[38rem] items-center">
