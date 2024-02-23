@@ -3,7 +3,7 @@
 **Welcome to Simple Notes!** Your go-to destination for effortless note-taking and organization. Our mission is to provide users with a seamless platform to store, edit, and manage their notes with ease.
 
 ## Live Link
-<a href="https://simple-notes-alpha.vercel.app/" target="_blank">Simple Notes Link</a>
+<a href="https://simple-notes-green.vercel.app/" target="_blank">Simple Notes Link</a>
 
 ## Authors
 - Geetesh Mehuria 
@@ -69,4 +69,4 @@ Here are some screenshots from our Simple Notes application:
 <a href="https://github.com/geeteshmehuria/simple-notes-backend" target="_blank">Simple-Notes-Backend Github link</a>
 
 ## Backend Live 
-<a href="https://simple-notes-backend.onrender.com/" target="_blank">Simple-Notes-Backend Live link</a>
+<a href="https://aquamarine-sturgeon-robe.cyclic.app/" target="_blank">Simple-Notes-Backend Live link</a>

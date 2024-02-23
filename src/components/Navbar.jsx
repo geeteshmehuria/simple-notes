@@ -20,7 +20,7 @@ import { authLinLout } from "../redux/authSlice";
 import axios from "axios";
 import { HamburgerIcon } from "@chakra-ui/icons";
 // import React from "react";
-
+// askdbfahkdfdf
 const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -30,7 +30,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       const response = await axios.post(
-        "https://insta-backend-dece.onrender.com/users/logout",
+        "https://simple-notes-backend.onrender.com/users/logout",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -63,7 +63,7 @@ const Navbar = () => {
                 fontSize={{ base: "1.6rem", md: "2rem" }}
                 color={"white"}
               >
-                Instagram
+                SimpleNotes
               </Heading>
             </Link>
           </Box>
@@ -82,10 +82,30 @@ const Navbar = () => {
               display={{ base: "none", md: "flex" }}
               justifyContent="space-around"
             >
-              
+              <Link to="/">
+                <Button
+                  fontSize={"1.3rem"}
+                  color={"white"}
+                  bg={"transparent"}
+                  _hover={{ bg: "transparent", color: "#90ee90" }}
+                >
+                  Home
+                </Button>
+              </Link>
 
               {auth ? (
                 <>
+                  <Link to="/dashboard">
+                    <Button
+                      fontSize={"1.3rem"}
+                      color={"white"}
+                      bg={"transparent"}
+                      _hover={{ bg: "transparent", color: "#90ee90" }}
+                    >
+                      Dashboard
+                    </Button>
+                  </Link>
+
                   <Button
                     fontSize={"1.3rem"}
                     color={"white"}
@@ -98,7 +118,7 @@ const Navbar = () => {
                 </>
               ) : (
                 <>
-                  <Link to="/">
+                  <Link to="/login">
                     <Button
                       fontSize={"1.3rem"}
                       color={"white"}
@@ -142,7 +162,14 @@ const Navbar = () => {
               </Box>
               {auth ? (
                 <>
-                
+                  <Link
+                    to="/dashboard"
+                    className="hover:bg-primeGreen-600 block py-2"
+                    color="#2f4e44"
+                    onClick={onClose}
+                  >
+                    Dashboard
+                  </Link>
 
                   <Text
                     className="hover:bg-primeGreen-600 block py-2"
