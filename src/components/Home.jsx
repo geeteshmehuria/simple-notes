@@ -4,7 +4,6 @@ import Img from "../assets/homePageImg.png";
 import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-// https://media.istockphoto.com/id/701257934/vector/multicolor-post-it-notes.jpg?s=2048x2048&w=is&k=20&c=ZTD4rhqM3CV0S1px-LSwiBF2D6XpJkgpO5e_jA2LS5k=
 const Home = () => {
   const auth = useSelector((state) => state.auth.auth);
 

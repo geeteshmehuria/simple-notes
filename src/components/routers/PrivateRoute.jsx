@@ -6,3 +6,4 @@ const PrivateRoutes = () => {
   return auth ? <Outlet /> : <Navigate to="/login" />;
 };
 export default PrivateRoutes;
+// ..

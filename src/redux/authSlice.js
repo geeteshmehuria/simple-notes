@@ -11,6 +11,6 @@ export const authSlice = createSlice({
     },
   },
 });
-
+// ...
 export const { authLinLout } = authSlice.actions;
 export default authSlice.reducer;

@@ -19,8 +19,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { authLinLout } from "../redux/authSlice";
 import axios from "axios";
 import { HamburgerIcon } from "@chakra-ui/icons";
-// import React from "react";
-// askdbfahkdfdf
+
 const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();

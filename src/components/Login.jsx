@@ -23,7 +23,6 @@ import { authLinLout } from "../redux/authSlice";
 import { Link } from "react-router-dom";
 
 const Login = () => {
-  //   const [username, setUserName] = useState("");
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth.auth);
   const [email, setEmail] = useState("");
