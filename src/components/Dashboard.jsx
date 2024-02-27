@@ -48,7 +48,7 @@ const Dashboard = () => {
           }
         );
         setNotes(res.data.notes);
-        // console.log(res.data.notes);
+    
         setLoading(false);
       } catch (error) {
         console.log(error);
@@ -122,8 +122,7 @@ const Dashboard = () => {
     }
   };
 
-  // const { isOpen, onOpen,onClose } = useDisclosure();
-  // linear-gradient(90deg, rgba(63,228,251,0.7400210084033614) 0%, rgba(70,89,252,0.5075280112044818) 100%)
+
   return (
     <>
       <Box>
